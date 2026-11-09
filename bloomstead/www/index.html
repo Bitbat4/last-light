@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#bfe9ff" />
+  <title>Bloomstead</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <div class="sky-deco" aria-hidden="true"></div>
+
+    <header id="topbar">
+      <button class="pill" id="pill-petals" data-go="shop" aria-label="Petals">
+        <span class="ico ico-petal"></span><span id="w-petals">0</span><span class="plus">+</span>
+      </button>
+      <button class="pill" id="pill-gems" data-go="shop" aria-label="Gems">
+        <span class="ico ico-gem"></span><span id="w-gems">0</span><span class="plus">+</span>
+      </button>
+      <button class="icon-btn" id="btn-settings" aria-label="Settings"><span class="ico ico-gear"></span></button>
+    </header>
+
+    <!-- HOME -->
+    <section id="screen-home" class="screen active">
+      <div class="logo">
+        <div class="logo-flower"></div>
+        <h1>Bloom<span>stead</span></h1>
+        <p class="tagline">block puzzle · garden story</p>
+      </div>
+      <button class="garden-preview" id="home-garden" aria-label="Open garden">
+        <canvas id="home-garden-canvas"></canvas>
+        <div class="gp-label"><span id="home-area-name">Grandma's Cottage</span><span id="home-area-progress">0/8</span></div>
+        <div class="gp-next" id="home-next-task"></div>
+      </button>
+      <div class="side-left">
+        <button class="side-btn" id="btn-daily"><span class="ico ico-gift"></span><b>Daily</b><i class="badge" id="badge-daily">!</i></button>
+        <button class="side-btn" id="btn-spin"><span class="ico ico-wheel"></span><b>Spin</b><i class="badge" id="badge-spin">!</i></button>
+      </div>
+      <div class="side-right">
+        <button class="side-btn offer" id="btn-starter"><span class="ico ico-chest"></span><b>Starter</b></button>
+        <button class="side-btn" id="btn-noads"><span class="ico ico-noads"></span><b>No Ads</b></button>
+      </div>
+      <div class="play-stack">
+        <button class="btn btn-green btn-xl" id="btn-level"><span class="lvl-k">LEVEL</span> <span id="home-level">1</span></button>
+        <button class="btn btn-blue btn-lg" id="btn-classic">Classic <small id="home-best">Best 0</small></button>
+        <button class="btn btn-ghost btn-sm hidden" id="btn-resume">Resume classic game</button>
+      </div>
+    </section>
+
+    <!-- GAME -->
+    <section id="screen-game" class="screen">
+      <div class="game-top">
+        <button class="icon-btn" id="btn-pause" aria-label="Pause"><span class="ico ico-pause"></span></button>
+        <div class="hud-center">
+          <div class="hud-score" id="hud-score">0</div>
+          <div class="hud-sub" id="hud-sub"><span class="ico ico-crown"></span> <span id="hud-best">0</span></div>
+        </div>
+        <div class="hud-goal" id="hud-goal"><span class="ico ico-bud"></span><span id="hud-goal-n">0</span></div>
+      </div>
+      <canvas id="game-canvas"></canvas>
+      <div class="boosters">
+        <button class="booster" data-b="undo"><span class="ico ico-undo"></span><i class="cnt" data-cnt="undo">0</i><b>Undo</b></button>
+        <button class="booster" data-b="reroll"><span class="ico ico-reroll"></span><i class="cnt" data-cnt="reroll">0</i><b>Shuffle</b></button>
+        <button class="booster" data-b="trowel"><span class="ico ico-trowel"></span><i class="cnt" data-cnt="trowel">0</i><b>Trowel</b></button>
+      </div>
+    </section>
+
+    <!-- GARDEN -->
+    <section id="screen-garden" class="screen">
+      <h2 class="screen-title" id="garden-title">Grandma's Cottage</h2>
+      <p class="screen-sub" id="garden-blurb"></p>
+      <div class="garden-frame"><canvas id="garden-canvas"></canvas></div>
+      <div class="progress"><div class="bar"><i id="garden-bar"></i></div><span id="garden-count">0/8</span></div>
+      <div class="task-card" id="task-card"></div>
+      <div class="task-list" id="task-list"></div>
+    </section>
+
+    <!-- SHOP -->
+    <section id="screen-shop" class="screen">
+      <h2 class="screen-title">Shop</h2>
+      <div class="shop" id="shop"></div>
+    </section>
+
+    <nav id="bottomnav">
+      <button data-go="garden"><span class="ico ico-house"></span><b>Garden</b></button>
+      <button data-go="home" class="active"><span class="ico ico-play"></span><b>Play</b></button>
+      <button data-go="shop"><span class="ico ico-shop"></span><b>Shop</b></button>
+    </nav>
+
+    <div id="banner-slot">Ad banner</div>
+    <div id="hint" class="hidden"></div>
+    <div id="toast"></div>
+    <div id="modal-root"></div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/save.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/monetize.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

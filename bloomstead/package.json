@@ -1,0 +1,28 @@
+{
+  "name": "bloomstead",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bloomstead — a block-puzzle garden game for iPhone (Capacitor).",
+  "scripts": {
+    "serve": "npx --yes http-server www -p 8080 -c-1",
+    "test": "node tests/core.test.js && node tests/playtest.js",
+    "ios:add": "npx cap add ios",
+    "ios:sync": "npx cap sync ios",
+    "ios:open": "npx cap open ios"
+  },
+  "dependencies": {
+    "@capacitor-community/admob": "^6.0.0",
+    "@capacitor/app": "^6.0.0",
+    "@capacitor/core": "^6.1.0",
+    "@capacitor/haptics": "^6.0.0",
+    "@capacitor/ios": "^6.1.0",
+    "@capacitor/preferences": "^6.0.0",
+    "@capacitor/splash-screen": "^6.0.0",
+    "@capacitor/status-bar": "^6.0.0",
+    "@revenuecat/purchases-capacitor": "^9.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^6.1.0"
+  }
+}

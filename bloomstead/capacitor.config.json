@@ -1,0 +1,15 @@
+{
+  "appId": "com.bitbat4.bloomstead",
+  "appName": "Bloomstead",
+  "webDir": "www",
+  "backgroundColor": "#bfe9ff",
+  "ios": {
+    "contentInset": "never",
+    "scrollEnabled": false,
+    "backgroundColor": "#bfe9ff"
+  },
+  "plugins": {
+    "SplashScreen": { "launchAutoHide": false, "backgroundColor": "#bfe9ff", "showSpinner": false },
+    "StatusBar": { "style": "LIGHT", "overlaysWebView": true }
+  }
+}
